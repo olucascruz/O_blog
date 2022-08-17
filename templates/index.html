@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>contatos</h1>
-    <h2>Lista:</h2>
-    <p>uea@uea.edu.br</p>
-    {% if usuario[1] == "O user" %}
-        <h2>Ola {{usuario[2]}}</h2>
-    {% endif %}
-        
-    <p>{{nome}}</p>
+    {%for post in posts%}
+        <article class="post">
+            <header>
+                <div>
+                    <h1>{{post.title}}</h1>
+                    <div class="about">
+                        Criado por '{{post['author']}}' em {{post['created'].strftime('%d-%m-%Y')}}</div>
+                </div>
+            </header>
+            <p class="body">{{post['body']}}</p>
+        </article>
+        {%if not loop.last %}
+        <hr>
+        {%endif%}
+        {%endfor%}
+
 {% endblock %}
