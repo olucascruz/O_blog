@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from datetime import datetime
+import wikipedia
 
 app = Flask("Hello")
 
@@ -7,8 +8,8 @@ app = Flask("Hello")
 
 posts = [
     {
-        "title" : "O post vey",
-        "body": "Este post certamente é um post",
+        "title" : wikipedia.page("Mouse").title,
+        "body": wikipedia.page("Mouse").summary,
         "author": "cara que escreve posts",
         "created": datetime(2022,8,17)
     },
