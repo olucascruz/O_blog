@@ -3,11 +3,14 @@
     {%for post in posts%}
         <article class="post">
             <header>
-                <div>
-                    <h1>{{post.title}}</h1>
-                    <div class="about">
-                        Criado por '{{post['author']}}' em {{post['created'].strftime('%d-%m-%Y')}}</div>
-                </div>
+                    <div>
+                        <a href="{{ url_for('post', id=post.id)}}">
+                            <h1>{{post.title}}</h1>
+                        </a>
+                        <div class="about">
+                            Criado por '{{post['author']}}' em {{post['created'].strftime('%d-%m-%Y')}}</div>
+                    </div>
+                ""
             </header>
             <p class="body">{{post['body']}}</p>
         </article>
