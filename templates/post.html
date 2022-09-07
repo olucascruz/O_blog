@@ -3,11 +3,11 @@
         <article class="post">
             <header>
                 <div>
-                    <h1>{{post.title}}</h1>
+                    <h1 class="titlePost">{{post.title}}</h1>
                         Criado por '{{post['author']}}' em {{post['created'].strftime('%d-%m-%Y')}}</div>
                 </div>
             </header>
-            <p class="content">{{post['content']}}</p>
+            <p class="content-post">{{post['content']}}</p>
         </article>
 
 {% endblock %}

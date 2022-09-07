@@ -1,19 +1,53 @@
-html{
-    background-color: rgb(116, 114, 114);
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 body{
     background: rgb(199, 199, 199);
+    height: 100%;
+    width: 100%;
 }
 h1{
     font-family: serif;
+}
+
+.siteName{
+    font-size: 4rem;
+    padding-top: 10px;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    display: inline-flex;
+}
+
+.textInitial{
+    padding: 1rem;
+    background-color: aliceblue;
+    height: 16rem;
+    width: 15%;
+    min-width: 150px;
+}
+.imgInitial{
+    background-color: white;
+    width: 85%;
+    height: 12rem;   
+}
+img{
+    width: 100%;
+    height: 100%;
 }
 
 hr{
     border: solid;
     color:rgb(0, 0, 0);
     border-bottom: 0.5px solid rgb(250, 250, 250);
-    margin-left: 10rem;
+    margin-left: 4rem;
+    width: 40%;
+
 }
 
 .post .about{
@@ -22,5 +56,29 @@ hr{
 }
 
 .post{
-    padding-left: 10rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+
+}
+.content{
+    margin-left: 15%;
+}
+.content-post{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 5%;
+    line-height: 1.8rem;
+}
+
+.titlePost{
+    font-size: 2rem;
+}
+
+.body{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }

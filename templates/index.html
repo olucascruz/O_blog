@@ -5,12 +5,12 @@
             <header>
                     <div>
                         <a href="{{ url_for('post', id=post.id)}}">
-                            <h1>{{post.title}}</h1>
+                            <h1 class="titlePost">{{post.title}}</h1>
                         </a>
                         <div class="about">
                             Criado por '{{post['author']}}' em {{post['created'].strftime('%d-%m-%Y')}}</div>
                     </div>
-                ""
+                
             </header>
             <p class="body">{{post['body']}}</p>
         </article>
