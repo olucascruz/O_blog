@@ -19,4 +19,15 @@
         {%endif%}
         {%endfor%}
 
+        <nav aria-label="Pages">
+            <ul class="pagination pagination-lg">
+              <li class="page-item disabled">
+                <a class="page-link" href="1" tabindex="-1">1</a>
+              </li>
+              {%for i in range(2, n_posts+1)%}
+              <li class="page-item"><a class="page-link" href="{{ url_for('index', page=i)}}">{{i}}</a></li>
+              {%endfor%}
+            </ul>
+          </nav>
+
 {% endblock %}
